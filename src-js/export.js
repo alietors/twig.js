@@ -64,6 +64,7 @@ goog.exportSymbol('twig.filter.last', twig.filter.last);
 goog.exportSymbol('twig.filter.reverse', twig.filter.reverse);
 goog.exportSymbol('twig.filter.batch', twig.filter.batch);
 goog.exportSymbol('twig.filter.merge', twig.filter.merge);
+goog.exportSymbol('twig.filter.split', twig.filter.split);
 
 goog.exportSymbol('twig.functions.max', twig.functions.max);
 goog.exportSymbol('twig.functions.min', twig.functions.min);

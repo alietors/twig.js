@@ -163,6 +163,25 @@ twig.filter.nl2br = function(str) {
 };
 
 /**
+ * @export
+ * @param {string} string
+ * @param {string} separator
+ * @param {number} limit
+ * @return {goog.array.ArrayLike|Object}
+ */
+twig.filter.split = function(string, separator, limit) {
+	if (limit === 0 || limit === 1) {
+		return [string];
+	} else if (limit < 0) {
+		return string.split(separator).slice(0, limit);
+	} else if (limit > 1) {
+		return string.split(separator, limit-1).concat(string.split(separator).slice(limit-1).join(separator));
+	} else {
+		return string.split(separator)
+	}
+};
+
+/**
  * @param {twig.Environment} env
  * @param {string} value
  * @return {string}
